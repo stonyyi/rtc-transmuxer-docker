@@ -17,5 +17,7 @@ WORKDIR /usr/src/cine
 
 EXPOSE 80
 
+ENV RUN_AS=rtc_transmuxer
+ENV NO_NEWRELIC=true
 # start the rtc-transmuxer
-CMD ./node_modules/.bin/coffee apps/rtc_transmuxer/index.coffee
+CMD ./node_modules/.bin/coffee server.coffee
