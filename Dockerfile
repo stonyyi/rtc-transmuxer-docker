@@ -15,11 +15,7 @@ RUN npm install --production
 
 WORKDIR /usr/src/cine
 
-# TODO-ish ensure necessary secure environment variables.....
-
-VOLUME ["/var/rtc-recordings"]
-
-EXPOSE 8880
+EXPOSE 80
 
 # start the rtc-transmuxer
 CMD ./node_modules/.bin/coffee apps/rtc_transmuxer/index.coffee
